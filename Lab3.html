@@ -58,12 +58,14 @@ const point = { //Create a point
     longitude: -118.80657463861,
     latitude: 34.0005930608889
  };
-  const Symbol1 = PictureMarkerSymbol ({
+
+let symbol = {
   type: "picture-marker",  // autocasts as new PictureMarkerSymbol()
   url: "https://static.arcgis.com/images/Symbols/Shapes/BlackStarLargeB.png",
   width: "64px",
   height: "64px"
-});
+};
+	    
  const pointGraphic = new Graphic({
     geometry: point,
     symbol: Symbol1
