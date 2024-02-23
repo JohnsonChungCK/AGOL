@@ -29,12 +29,16 @@
     "esri/views/MapView",
 
     "esri/Graphic",
-    "esri/layers/GraphicsLayer"
+    "esri/layers/GraphicsLayer",
+    "esri/symbols/PictureMarkerSymbol"
 
-    ], function(esriConfig,Map, MapView, Graphic, GraphicsLayer) {
+    ], function(esriConfig,Map, MapView, Graphic, GraphicsLayer,PictureMarkerSymbol) {
 
   esriConfig.apiKey = "AAPK7ea8e38f6b4b4f969ab170c41c01634akao_m4e5gL3AyABug_bvD9dN7kbXw7BSISXg4Y558XYUVj59ej6DtByYM0Cms4Tz";
 
+
+
+	    
   const map = new Map({
     basemap: "arcgis/topographic" // basemap styles service
   });
@@ -64,8 +68,19 @@ const point = { //Create a point
  };
  const pointGraphic = new Graphic({
     geometry: point,
-    symbol: simpleMarkerSymbol
+    symbol: symbol
  });
+
+ const PictureMarkerSymbol = {
+    let symbol = {
+  type: "picture-marker",  // autocasts as new PictureMarkerSymbol()
+  url: "https://static.arcgis.com/images/Symbols/Shapes/BlackStarLargeB.png",
+  width: "64px",
+  height: "64px"
+};
+    }
+ };
+	    
  graphicsLayer.add(pointGraphic);
  });
 </script>
