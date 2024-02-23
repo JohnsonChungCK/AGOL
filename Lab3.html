@@ -51,17 +51,15 @@ const view = new MapView({
 const graphicsLayer = new GraphicsLayer();
  webmap.add(graphicsLayer);
 
-const point1 = { //Create a point
-    type: "point",
+const point = { //Create a point
+    (type: "point",
     longitude: -87.243701,
-    latitude: 52.094759
+    latitude: 52.094759);
+    (type: "point",
+    longitude: -102.097216,
+    latitude: 59.879343)
  };
 
-const point2 = { //Create a point
-    type: "point",
-    longitude: -102.097216,
-    latitude: 59.879343
- };
 
 
 let symbol1 = {
@@ -72,7 +70,7 @@ let symbol1 = {
 };
 	    
  const pointGraphic = new Graphic({
-    geometry: [point1,point2],
+    geometry: point,
     symbol: symbol1
  });
 
