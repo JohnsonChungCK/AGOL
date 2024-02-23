@@ -58,26 +58,18 @@ const point = { //Create a point
     longitude: -118.80657463861,
     latitude: 34.0005930608889
  };
- const simpleMarkerSymbol = {
-    type: "simple-marker",
-    color: [226, 119, 40],  // Orange
-    outline: {
-        color: [255, 255, 255], // White
-        width: 1
-    }
- };
- const pointGraphic = new Graphic({
-    geometry: point,
-    symbol: symbol
- });
-
- const PictureMarkerSymbol = {
-    let symbol = {
+  const PictureMarkerSymbol = {
   type: "picture-marker",  // autocasts as new PictureMarkerSymbol()
   url: "https://static.arcgis.com/images/Symbols/Shapes/BlackStarLargeB.png",
   width: "64px",
   height: "64px"
 };
+ const pointGraphic = new Graphic({
+    geometry: point,
+    symbol: PictureMarkerSymbol
+ });
+
+
     }
  };
 	    
