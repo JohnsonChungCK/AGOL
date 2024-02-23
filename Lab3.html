@@ -51,16 +51,34 @@ const view = new MapView({
 const graphicsLayer = new GraphicsLayer();
  webmap.add(graphicsLayer);
 
-const point1 = { //Create a point
+const point1 = { //ON,QB
     type: "point",
-    longitude: -87.243701,
-    latitude: 52.094759
+    longitude: -79.779298,
+    latitude: 49.467196
  };
 
-const point2 = { //Create a point
+const point2 = { //AL,SK,MB
+    type: "point",
+    longitude: -104.776319,
+    latitude: 53.245079
+ };
+
+const point3 = { //BC
+    type: "point",
+    longitude: -124.815382,
+    latitude: 55.297487
+ };
+
+const point4 = { //NT
     type: "point",
     longitude: -102.097216,
     latitude: 59.879343
+ };
+
+const point5 = { //East
+    type: "point",
+    longitude: -64.522413,
+    latitude: 48.943694
  };
 
 
@@ -70,6 +88,36 @@ let symbol1 = {
   width: "60px",
   height: "60px"
 };
+
+let symbol2 = {
+  type: "picture-marker",  // autocasts as new PictureMarkerSymbol()
+  url: "https://johnsonchungck.github.io/AGOL/city.png",
+  width: "60px",
+  height: "60px"
+};
+
+let symbol3 = {
+  type: "picture-marker",  // autocasts as new PictureMarkerSymbol()
+  url: "https://johnsonchungck.github.io/AGOL/city.png",
+  width: "60px",
+  height: "60px"
+};
+
+let symbol4 = {
+  type: "picture-marker",  // autocasts as new PictureMarkerSymbol()
+  url: "https://johnsonchungck.github.io/AGOL/city.png",
+  width: "60px",
+  height: "60px"
+};
+
+let symbol5 = {
+  type: "picture-marker",  // autocasts as new PictureMarkerSymbol()
+  url: "https://johnsonchungck.github.io/AGOL/city.png",
+  width: "60px",
+  height: "60px"
+};
+
+	    
 	    
  const pointGraphic1 = new Graphic({
     geometry: point1,
@@ -80,9 +128,27 @@ const pointGraphic2 = new Graphic({
     geometry: point2,
     symbol: symbol1
  });
+
+const pointGraphic3 = new Graphic({
+    geometry: point3,
+    symbol: symbol1
+ });
+	    
+const pointGraphic4= new Graphic({
+    geometry: point4,
+    symbol: symbol1
+ });
+	    
+const pointGraphic5 = new Graphic({
+    geometry: point5,
+    symbol: symbol1
+ });
 	    
  graphicsLayer.add(pointGraphic1);
 graphicsLayer.add(pointGraphic2);
+graphicsLayer.add(pointGraphic3);
+graphicsLayer.add(pointGraphic4);
+graphicsLayer.add(pointGraphic5);
  });
 </script>
 </head>
