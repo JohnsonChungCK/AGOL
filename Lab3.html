@@ -25,45 +25,42 @@
   <script>
     require([
     "esri/config",
-    "esri/Map",
     "esri/views/MapView",
-
+    "esri/WebMap",
     "esri/Graphic",
     "esri/layers/GraphicsLayer",
     "esri/symbols/PictureMarkerSymbol"
 
-    ], function(esriConfig,Map, MapView, Graphic, GraphicsLayer,PictureMarkerSymbol) {
+    ], function(esriConfig, MapView,WebMap, Graphic, GraphicsLayer,PictureMarkerSymbol) {
 
   esriConfig.apiKey = "AAPK7ea8e38f6b4b4f969ab170c41c01634akao_m4e5gL3AyABug_bvD9dN7kbXw7BSISXg4Y558XYUVj59ej6DtByYM0Cms4Tz";
 
+const webmap = new WebMap({
+  portalItem: {
+    id: "ef02d5584a5c41ceb64f3029c81b235e"
+  }
+});
 
+const view = new MapView({
+  container: "viewDiv",
+  map: webmap
+});
 
 	    
-  const map = new Map({
-    basemap: "arcgis/topographic" // basemap styles service
-  });
-
-  const view = new MapView({
-    map: map,
-    center: [-118.80500,34.02700], //Longitude, latitude
-    zoom: 13,
-    container: "viewDiv"
- });
-
 const graphicsLayer = new GraphicsLayer();
  map.add(graphicsLayer);
 
 const point = { //Create a point
     type: "point",
-    longitude: -118.80657463861,
-    latitude: 34.0005930608889
+    longitude: -87.243701,
+    latitude: 52.094759
  };
 
 let symbol1 = {
   type: "picture-marker",  // autocasts as new PictureMarkerSymbol()
-  url: "https://static.arcgis.com/images/Symbols/Shapes/BlackStarLargeB.png",
-  width: "64px",
-  height: "64px"
+  url: "https://johnsonchungck.github.io/AGOL/city.png",
+  width: "80px",
+  height: "80px"
 };
 	    
  const pointGraphic = new Graphic({
