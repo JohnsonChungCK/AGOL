@@ -44,7 +44,7 @@ const webmap = new WebMap({
 const view = new MapView({
   container: "viewDiv",
   map: webmap,
-  center: [-102.097216,59.879343],
+  center: [[-102.097216,59.879343],[-102.097216,59.879343]]
 });
 
 	    
@@ -53,8 +53,7 @@ const graphicsLayer = new GraphicsLayer();
 
 const point = { //Create a point
     type: "point",
-    longitude: -87.243701,
-    latitude: 52.094759
+    center: [-87.243701,52.094759]
  };
 
 let symbol1 = {
