@@ -43,7 +43,8 @@ const webmap = new WebMap({
 
 const view = new MapView({
   container: "viewDiv",
-  map: webmap
+  map: webmap,
+  center: [-102.097216,59.879343],
 });
 
 	    
@@ -59,8 +60,8 @@ const point = { //Create a point
 let symbol1 = {
   type: "picture-marker",  // autocasts as new PictureMarkerSymbol()
   url: "https://johnsonchungck.github.io/AGOL/city.png",
-  width: "80px",
-  height: "80px"
+  width: "60px",
+  height: "60px"
 };
 	    
  const pointGraphic = new Graphic({
